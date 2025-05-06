@@ -1,1 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Training Schedule 2025</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+      }
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Calendar Styles */
+      .calendar-container {
+        margin-bottom: 30px;
+      }
+      .month-selector {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+      .month-selector button {
+        padding: 8px 16px;
+        margin: 0 5px;
+        background-color: #f1f1f1;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      .month-selector button.active {
+        background-color: #4caf50;
+        color: white;
+        border-color: #4caf50;
+      }
+      .calendar {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .calendar th {
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .calendar td {
+        border: 1px solid #ddd;
+        height: 100px;
+        vertical-align: top;
+        padding: 5px;
+        width: 14.28%;
+      }
+      .calendar .date {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .calendar .event {
+        background-color: #e3f2fd;
+        margin-bottom: 3px;
+        padding: 3px 5px;
+        border-radius: 3px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      .calendar .event.batch1 {
+        background-color: #e3f2fd;
+      }
+      .calendar .event.batch2 {
+        background-color: #e8f5e9;
+      }
+      .calendar .event.fdm {
+        background-color: #fff3e0;
+      }
+      .calendar .event.circle {
+        background-color: #f3e5f5;
+      }
+      .calendar .event.boq {
+        background-color: #e0f2f1;
+      }
+      .calendar .event.care {
+        background-color: #f1f8e9;
+      }
+      .calendar .weekend {
+        background-color: #f9f9f9;
+      }
+      .calendar .holiday {
+        background-color: #ffebee;
+      }
+
+      /* Table Styles */
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+      }
+      .table th,
+      .table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      .table th {
+        background-color: #f1f1f1;
+        font-weight: bold;
+      }
+      .table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      .notes {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 4px;
+        margin-top: 20px;
+      }
+      .notes ul {
+        margin-top: 10px;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Training Schedule 2025</h1>
+
+      <!-- Calendar View -->
+      <h2>Calendar View</h2>
+      <div class="calendar-container">
+        <div class="month-selector">
+          <button onclick="showMonth('may')" class="active">May 2025</button>
+          <button onclick="showMonth('june')">June 2025</button>
+          <button onclick="showMonth('july')">July 2025</button>
+          <button onclick="showMonth('august')">August 2025</button>
+        </div>
+
+        <!-- May 2025 -->
+        <table class="calendar" id="may">
+          <thead>
+            <tr>
+              <th>Sunday</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="date">1</div>
+              </td>
+              <td class="weekend">
+                <div class="date">2</div>
+              </td>
+              <td class="weekend">
+                <div class="date">3</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">4</div>
+              </td>
+              <td>
+                <div class="date">5</div>
+              </td>
+              <td>
+                <div class="date">6</div>
+              </td>
+              <td>
+                <div class="date">7</div>
+              </td>
+              <td>
+                <div class="date">8</div>
+              </td>
+              <td class="weekend">
+                <div class="date">9</div>
+              </td>
+              <td class="weekend">
+                <div class="date">10</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">11</div>
+              </td>
+              <td>
+                <div class="date">12</div>
+                <div class="event batch1">ToT Batch 1</div>
+              </td>
+              <td>
+                <div class="date">13</div>
+                <div class="event batch1">ToT Batch 1</div>
+              </td>
+              <td>
+                <div class="date">14</div>
+                <div class="event batch2">ToT Batch 2</div>
+              </td>
+              <td>
+                <div class="date">15</div>
+                <div class="event batch2">ToT Batch 2</div>
+              </td>
+              <td class="weekend">
+                <div class="date">16</div>
+              </td>
+              <td class="weekend">
+                <div class="date">17</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">18</div>
+                <div class="event fdm">FDM Training</div>
+              </td>
+              <td>
+                <div class="date">19</div>
+                <div class="event fdm">FDM Training</div>
+              </td>
+              <td>
+                <div class="date">20</div>
+                <div class="event fdm">FDM Training</div>
+              </td>
+              <td>
+                <div class="date">21</div>
+                <div class="event fdm">FDM Training</div>
+              </td>
+              <td>
+                <div class="date">22</div>
+                <div class="event fdm">FDM Training</div>
+              </td>
+              <td class="weekend">
+                <div class="date">23</div>
+              </td>
+              <td class="weekend">
+                <div class="date">24</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">25</div>
+              </td>
+              <td>
+                <div class="date">26</div>
+              </td>
+              <td>
+                <div class="date">27</div>
+              </td>
+              <td>
+                <div class="date">28</div>
+              </td>
+              <td>
+                <div class="date">29</div>
+              </td>
+              <td class="weekend">
+                <div class="date">30</div>
+              </td>
+              <td class="weekend">
+                <div class="date">31</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- June 2025 -->
+        <table class="calendar" id="june" style="display: none">
+          <thead>
+            <tr>
+              <th>Sunday</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="date">1</div>
+              </td>
+              <td>
+                <div class="date">2</div>
+              </td>
+              <td>
+                <div class="date">3</div>
+              </td>
+              <td class="holiday">
+                <div class="date">4</div>
+                <div class="event">Eid al-Adha</div>
+              </td>
+              <td class="holiday">
+                <div class="date">5</div>
+                <div class="event">Eid al-Adha</div>
+              </td>
+              <td class="weekend holiday">
+                <div class="date">6</div>
+                <div class="event">Eid al-Adha</div>
+              </td>
+              <td class="weekend holiday">
+                <div class="date">7</div>
+                <div class="event">Eid al-Adha</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="holiday">
+                <div class="date">8</div>
+                <div class="event">Eid al-Adha</div>
+              </td>
+              <td class="holiday">
+                <div class="date">9</div>
+                <div class="event">Eid al-Adha</div>
+              </td>
+              <td>
+                <div class="date">10</div>
+              </td>
+              <td>
+                <div class="date">11</div>
+              </td>
+              <td>
+                <div class="date">12</div>
+              </td>
+              <td class="weekend">
+                <div class="date">13</div>
+              </td>
+              <td class="weekend">
+                <div class="date">14</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">15</div>
+                <div class="event circle">Chattogram Metro East</div>
+              </td>
+              <td>
+                <div class="date">16</div>
+                <div class="event circle">Chattogram Metro West</div>
+              </td>
+              <td>
+                <div class="date">17</div>
+                <div class="event circle">Chattogram North</div>
+              </td>
+              <td>
+                <div class="date">18</div>
+                <div class="event circle">Chattogram South</div>
+              </td>
+              <td>
+                <div class="date">19</div>
+                <div class="event circle">Cox's Bazar</div>
+              </td>
+              <td class="weekend">
+                <div class="date">20</div>
+              </td>
+              <td class="weekend">
+                <div class="date">21</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">22</div>
+                <div class="event circle">Rangamati</div>
+              </td>
+              <td>
+                <div class="date">23</div>
+                <div class="event circle">Cumilla</div>
+              </td>
+              <td>
+                <div class="date">24</div>
+                <div class="event circle">Noakhali</div>
+              </td>
+              <td>
+                <div class="date">25</div>
+                <div class="event circle">Jamalpur</div>
+              </td>
+              <td>
+                <div class="date">26</div>
+                <div class="event circle">Mymensingh-1</div>
+              </td>
+              <td class="weekend">
+                <div class="date">27</div>
+              </td>
+              <td class="weekend">
+                <div class="date">28</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">29</div>
+                <div class="event circle">Mymensingh-2</div>
+              </td>
+              <td>
+                <div class="date">30</div>
+                <div class="event circle">Tangail</div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="weekend"></td>
+              <td class="weekend"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- July 2025 -->
+        <table class="calendar" id="july" style="display: none">
+          <thead>
+            <tr>
+              <th>Sunday</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="date">1</div>
+                <div class="event circle">Moulavibazar</div>
+              </td>
+              <td>
+                <div class="date">2</div>
+                <div class="event circle">Sylhet</div>
+              </td>
+              <td>
+                <div class="date">3</div>
+              </td>
+              <td class="weekend">
+                <div class="date">4</div>
+              </td>
+              <td class="weekend">
+                <div class="date">5</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">6</div>
+              </td>
+              <td>
+                <div class="date">7</div>
+              </td>
+              <td>
+                <div class="date">8</div>
+              </td>
+              <td>
+                <div class="date">9</div>
+              </td>
+              <td>
+                <div class="date">10</div>
+              </td>
+              <td class="weekend">
+                <div class="date">11</div>
+              </td>
+              <td class="weekend">
+                <div class="date">12</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">13</div>
+                <div class="event boq">BOQ Training</div>
+              </td>
+              <td>
+                <div class="date">14</div>
+                <div class="event boq">BOQ Training</div>
+              </td>
+              <td>
+                <div class="date">15</div>
+                <div class="event boq">BOQ Training</div>
+              </td>
+              <td>
+                <div class="date">16</div>
+                <div class="event boq">BOQ Training</div>
+              </td>
+              <td>
+                <div class="date">17</div>
+              </td>
+              <td class="weekend">
+                <div class="date">18</div>
+              </td>
+              <td class="weekend">
+                <div class="date">19</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">20</div>
+              </td>
+              <td>
+                <div class="date">21</div>
+              </td>
+              <td>
+                <div class="date">22</div>
+              </td>
+              <td>
+                <div class="date">23</div>
+              </td>
+              <td>
+                <div class="date">24</div>
+              </td>
+              <td class="weekend">
+                <div class="date">25</div>
+              </td>
+              <td class="weekend">
+                <div class="date">26</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">27</div>
+              </td>
+              <td>
+                <div class="date">28</div>
+              </td>
+              <td>
+                <div class="date">29</div>
+              </td>
+              <td>
+                <div class="date">30</div>
+              </td>
+              <td>
+                <div class="date">31</div>
+              </td>
+              <td class="weekend"></td>
+              <td class="weekend"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- August 2025 -->
+        <table class="calendar" id="august" style="display: none">
+          <thead>
+            <tr>
+              <th>Sunday</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="weekend">
+                <div class="date">1</div>
+              </td>
+              <td class="weekend">
+                <div class="date">2</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">3</div>
+              </td>
+              <td>
+                <div class="date">4</div>
+              </td>
+              <td>
+                <div class="date">5</div>
+              </td>
+              <td>
+                <div class="date">6</div>
+              </td>
+              <td>
+                <div class="date">7</div>
+              </td>
+              <td class="weekend">
+                <div class="date">8</div>
+              </td>
+              <td class="weekend">
+                <div class="date">9</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">10</div>
+                <div class="event care">Care Point</div>
+              </td>
+              <td>
+                <div class="date">11</div>
+                <div class="event care">Care Point</div>
+              </td>
+              <td>
+                <div class="date">12</div>
+                <div class="event care">Care Point</div>
+              </td>
+              <td>
+                <div class="date">13</div>
+                <div class="event care">Care Point</div>
+              </td>
+              <td>
+                <div class="date">14</div>
+                <div class="event care">Care Point</div>
+              </td>
+              <td class="weekend">
+                <div class="date">15</div>
+              </td>
+              <td class="weekend">
+                <div class="date">16</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">17</div>
+                <div class="event care">Care Point</div>
+              </td>
+              <td>
+                <div class="date">18</div>
+                <div class="event care">Care Point</div>
+              </td>
+              <td>
+                <div class="date">19</div>
+              </td>
+              <td>
+                <div class="date">20</div>
+              </td>
+              <td>
+                <div class="date">21</div>
+              </td>
+              <td class="weekend">
+                <div class="date">22</div>
+              </td>
+              <td class="weekend">
+                <div class="date">23</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">24</div>
+              </td>
+              <td>
+                <div class="date">25</div>
+              </td>
+              <td>
+                <div class="date">26</div>
+              </td>
+              <td>
+                <div class="date">27</div>
+              </td>
+              <td>
+                <div class="date">28</div>
+              </td>
+              <td class="weekend">
+                <div class="date">29</div>
+              </td>
+              <td class="weekend">
+                <div class="date">30</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="date">31</div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="weekend"></td>
+              <td class="weekend"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table 1: Circle-wise Training Schedule -->
+      <h2>Table 1: Circle-wise Training Schedule</h2>
+      <p>
+        <em
+          >Starting from June 15, including Sundays, avoiding Fri-Sat and
+          holidays</em
+        >
+      </p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Zone</th>
+            <th>Circle</th>
+            <th>Dates</th>
+            <th>Duration</th>
+            <th>Participants</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Chittagong</strong></td>
+            <td>Chattogram Metro East</td>
+            <td>June 15, 2025 (Sun)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Chittagong</strong></td>
+            <td>Chattogram Metro West</td>
+            <td>June 16, 2025 (Mon)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Chittagong</strong></td>
+            <td>Chattogram North</td>
+            <td>June 17, 2025 (Tue)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Chittagong</strong></td>
+            <td>Chattogram South</td>
+            <td>June 18, 2025 (Wed)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Chittagong</strong></td>
+            <td>Cox's Bazar</td>
+            <td>June 19, 2025 (Thu)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Chittagong</strong></td>
+            <td>Rangamati</td>
+            <td>June 22, 2025 (Sun)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Comilla</strong></td>
+            <td>Cumilla</td>
+            <td>June 23, 2025 (Mon)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Comilla</strong></td>
+            <td>Noakhali</td>
+            <td>June 24, 2025 (Tue)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Mymensingh</strong></td>
+            <td>Jamalpur</td>
+            <td>June 25, 2025 (Wed)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Mymensingh</strong></td>
+            <td>Mymensingh-1</td>
+            <td>June 26, 2025 (Thu)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Mymensingh</strong></td>
+            <td>Mymensingh-2</td>
+            <td>June 29, 2025 (Sun)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Mymensingh</strong></td>
+            <td>Tangail</td>
+            <td>June 30, 2025 (Mon)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Sylhet</strong></td>
+            <td>Moulavibazar</td>
+            <td>July 1, 2025 (Tue)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><strong>Sylhet</strong></td>
+            <td>Sylhet</td>
+            <td>July 2, 2025 (Wed)</td>
+            <td>1 day</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Table 2: Overall Training Schedule -->
+      <h2>Table 2: Overall Training Schedule</h2>
+      <p><em>In chronological order, avoiding Fri-Sat and holidays</em></p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Training Title</th>
+            <th>Dates</th>
+            <th>Duration</th>
+            <th>Participants</th>
+            <th>Mode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Training of Trainers (Batch 1)</td>
+            <td>May 12-13, 2025 (Mon-Tue)</td>
+            <td>2 days</td>
+            <td>15-20</td>
+            <td>Offline</td>
+          </tr>
+          <tr>
+            <td>Training of Trainers (Batch 2)</td>
+            <td>May 14-15, 2025 (Wed-Thu)</td>
+            <td>2 days</td>
+            <td>15-20</td>
+            <td>Offline</td>
+          </tr>
+          <tr>
+            <td>Targeted Training on FDM</td>
+            <td>May 18-22, 2025 (Sun-Thu)</td>
+            <td>5 days</td>
+            <td>20</td>
+            <td>Offline</td>
+          </tr>
+          <tr>
+            <td>Circle-wise Training (All Zones)</td>
+            <td>June 15-July 2, 2025</td>
+            <td>1 day per circle</td>
+            <td>20 per circle</td>
+            <td>Offline</td>
+          </tr>
+          <tr>
+            <td>Training under BOQ (Previous Tender)</td>
+            <td>July 13-16, 2025 (Sun-Wed)</td>
+            <td>4 days</td>
+            <td>10</td>
+            <td>Online</td>
+          </tr>
+          <tr>
+            <td>Targeted Training on Care Point</td>
+            <td>August 10-14 & 17-18, 2025 (Sun-Thu & Sun-Mon)</td>
+            <td>7 days</td>
+            <td>10</td>
+            <td>Offline</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="notes">
+        <h3>Notes:</h3>
+        <p>This schedule is carefully adjusted to avoid:</p>
+        <ol>
+          <li>Weekends (Fridays and Saturdays)</li>
+          <li>Eid al-Adha holiday period (June 4-9, 2025)</li>
+          <li>Other national holidays in Bangladesh</li>
+        </ol>
+
+        <p><strong>Daily breakdown of multi-day trainings:</strong></p>
+        <ul>
+          <li>ToT Batch 1: May 12 (Mon), 13 (Tue) = 2 days</li>
+          <li>ToT Batch 2: May 14 (Wed), 15 (Thu) = 2 days</li>
+          <li>
+            FDM Training: May 18 (Sun), 19 (Mon), 20 (Tue), 21 (Wed), 22 (Thu) =
+            5 days
+          </li>
+          <li>
+            BOQ Training: July 13 (Sun), 14 (Mon), 15 (Tue), 16 (Wed) = 4 days
+          </li>
+          <li>
+            Care Point Training: August 10 (Sun), 11 (Mon), 12 (Tue), 13 (Wed),
+            14 (Thu), 17 (Sun), 18 (Mon) = 7 days
+          </li>
+        </ul>
+
+        <p>
+          <em
+            >All trainings include Sundays as working days, but continue to
+            avoid Fridays, Saturdays, and Bangladeshi holidays.</em
+          >
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function showMonth(month) {
+        // Hide all calendars
+        document.getElementById("may").style.display = "none";
+        document.getElementById("june").style.display = "none";
+        document.getElementById("july").style.display = "none";
+        document.getElementById("august").style.display = "none";
+
+        // Show the selected month
+        document.getElementById(month).style.display = "table";
+
+        // Update active button
+        const buttons = document.querySelectorAll(".month-selector button");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+          if (button.innerText.toLowerCase().includes(month)) {
+            button.classList.add("active");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
 
